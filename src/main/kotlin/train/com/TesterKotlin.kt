@@ -5,14 +5,20 @@ import java.util.*
 fun main(args: Array<String>){
     val scanner = Scanner(System.`in`)
 
-    print("Please enter number of tickets: ")
-    var numOfTickets = scanner.nextInt()
+    while (true) {
+        print("Please enter number of tickets: ")
+        var numOfTickets = scanner.nextInt()
 
-    print("How many round-trip tickets: ")
-    var roundTickets = scanner.nextInt()
+        if (numOfTickets != -1) {
+            print("How many round-trip tickets: ")
+            var roundTickets = scanner.nextInt()
 
-    val t = Ticket(numOfTickets,roundTickets)
-    t.count()
+            val t = Ticket(numOfTickets,roundTickets)
+            t.count()
+        } else {
+            break
+        }
+    }
 }
 
 // 類別
